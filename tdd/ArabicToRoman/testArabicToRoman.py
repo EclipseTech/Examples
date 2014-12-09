@@ -8,28 +8,30 @@ from collections import OrderedDict
 # 4 = IV
 
 numerals = OrderedDict(
-                 [(1000, "M"),
-                  (900, "CM"),
-                  (500, "D"),
-                  (400, "CD"),
-                  (100, "C"),
-                  (90, "XC"),
-                  (50, "L"),
-                  (40, "XL"),
-                  (10, "X"),
-                  (9, "IX"),
-                  (5, "V"),
-                  (4, "IV"),
-                  (1, "I")])
+    [(1000, "M"),
+     (900, "CM"),
+     (500, "D"),
+     (400, "CD"),
+     (100, "C"),
+     (90, "XC"),
+     (50, "L"),
+     (40, "XL"),
+     (10, "X"),
+     (9, "IX"),
+     (5, "V"),
+     (4, "IV"),
+     (1, "I")])
 
-def arabicToRoman (arabic):
+
+def arabicToRoman(arabic):
     roman=""
     for arabicNumeral, romanNumeral in numerals.items():
         roman+=romanNumeral*(arabic/arabicNumeral)
         arabic%=arabicNumeral
     return roman
 
-class TestarabicToRoman (unittest2.TestCase):
+
+class TestarabicToRoman(unittest2.TestCase):
     def testConversions(self):
         self.assertEquals("I", arabicToRoman(1))
         self.assertEquals("II", arabicToRoman(2))
