@@ -15,9 +15,6 @@ class Board:
             self.board[cell] = 1
             self.getNeighborCount(cell) # realize neighbor cells
 
-    def getState(self, cell):
-        return self.board[cell]
-
     def getNeighborCount(self, cell):
         a, b = cell
         neighbors = [self.board[(x, y)] for x in range(a-1, a+2)

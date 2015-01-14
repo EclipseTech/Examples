@@ -23,8 +23,11 @@ class TestGameOfLife(unittest2.TestCase):
     def tearDown(self):
         self.board = None
 
+    def getState(self, cell):
+        return self.board.board[cell]
+
     def assertState(self, state, cell):
-        self.assertEquals(self.board.getState(cell), state)
+        self.assertEquals(self.getState(cell), state)
 
     def assertStateChange(self, startState, endState, cell):
         self.assertState(startState, cell)
