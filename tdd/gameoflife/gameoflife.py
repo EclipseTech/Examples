@@ -3,7 +3,7 @@ from collections import defaultdict
 import time
 
 
-class Board:
+class gameoflife:
     def __init__(self):
         self.board = defaultdict(lambda: 0)
 
@@ -30,7 +30,7 @@ class Board:
         return 0
 
     def advancegame(self):
-        nextBoard = Board()
+        nextBoard = gameoflife()
         for cell in self.board.keys():
             if self.lifeMechanic(self.getNeighborCount(cell), self.board[cell]) == 1:
              nextBoard.addCells([cell])
@@ -53,7 +53,7 @@ class Board:
             print
 
 def main():
-    board = Board()
+    board = gameoflife()
     board.addCells([(1, 1), (1, 2), (1, 3),
                     (2, 1), (2, 2), (2, 3),
                     (3, 1), (3, 2), (3, 3)])

@@ -13,12 +13,12 @@
 #        test-friendly way, and what "value" cells outside the board has.
 #        Or maybe the board does not have borders?
 import unittest2
-from gameoflife import Board
+from gameoflife import gameoflife
 
 
 class TestGameOfLife(unittest2.TestCase):
     def setUp(self):
-        self.board = Board()
+        self.board = gameoflife()
 
     def tearDown(self):
         self.board = None
