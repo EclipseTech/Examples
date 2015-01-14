@@ -62,7 +62,10 @@ def main():
     # Glider
     #board.addCells([(0, 1), (1, 2), (2, 0), (2, 1), (2, 2)])
     #board.addCells([(4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6), (4, 7), (4, 8)])
-    board.printBoard(9, 9)
+    try:
+        board.printBoard(9, 9)
+    except KeyboardInterrupt:
+        pass
 
 if __name__ == "__main__":
     main()
