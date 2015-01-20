@@ -1,0 +1,3 @@
+TODO consider changing from tuple location based indexing to 0-8 number based indexing
+TODO change to .format string? __str__
+
