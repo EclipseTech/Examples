@@ -16,10 +16,11 @@ usage() {
         -h	show this help
 
     EXAMPLE:
-    $PROGNAME -b other -a something more commmand line args
-    OPTION_A: something
-    OPTION_B: other
-    Extra Arguments: more command line args
+        $PROGNAME -b other -a something more commmand line args
+        Output:
+            OPTION_A: something
+            OPTION_B: other
+            Extra Arguments: more command line args
 EOF
 }
 
