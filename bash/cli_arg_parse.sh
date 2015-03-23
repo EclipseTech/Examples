@@ -67,7 +67,9 @@ main() {
         echo 'OPTION_C: '${OPTION_C[@]}
         echo 'OPTION_C_append: '${OPTION_C_append[@]}
     fi
-    echo 'Extra Arguments: '${extras[@]}
+    if [[ -n $extas ]]; then
+        echo 'Extra Arguments: '${extras[@]}
+    fi
 }
 
 main
