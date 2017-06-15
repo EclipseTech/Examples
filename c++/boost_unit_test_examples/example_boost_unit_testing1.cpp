@@ -5,7 +5,7 @@
 // This could be used to define this as the main test module instead of a named module
 //#define BOOST_TEST_MAIN
 // Define test suite module name as "test something"
-#define BOOST_TEST_MODULE test something example 1
+#define BOOST_TEST_MODULE "Example boost unit testing 1"
 #include <boost/test/unit_test.hpp>
 // Use #include <boost/test/included/unit_test.hpp> for static linking
 

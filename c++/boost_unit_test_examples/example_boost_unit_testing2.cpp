@@ -17,7 +17,7 @@ void test_something()
 test_suite* init_unit_test_suite( int, char* [] )
 {
     // Test suite name
-    framework::master_test_suite().p_name.value = "Test something example 2";
+    framework::master_test_suite().p_name.value = "Example boost unit testing 2";
 
     // Register test_something
     // optional: # of expected failing tests
