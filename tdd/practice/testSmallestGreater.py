@@ -4,6 +4,7 @@ import unittest2
 '''
 Smallest greater elements in whole array
 An array is given of n length, and we need to calculate the next greater element for each element in given array. If next greater element is not available in given array then we need to fill '_' at that index place.
+https://www.geeksforgeeks.org/smallest-greater-elements-in-whole-array/
 '''
 def smallestGreater(array):
     indexLargest = None
