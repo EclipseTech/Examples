@@ -26,4 +26,6 @@ logging.warning('Really... why?')
 logging.error('LOG NOW, GO, DO IT! Oh, that is better')
 # The other module changed the root logging level, which changes it everywhere the root logger is used
 # All modules are now affected
+# This is also bad because any module to import this will call all these functions that are in the global level
+#    causing the root logger to be at the error level and log all of this to the console
 # Now let's go look at bad_logging2.py
