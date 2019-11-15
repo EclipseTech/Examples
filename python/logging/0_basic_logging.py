@@ -15,3 +15,4 @@ if __name__ == '__main__':
     except:
         logging.exception('{} Exception is an Error level log with stack trace'.format('Example 5'))
 
+    logging.critical('{} Critical level log'.format('Example 6'))
