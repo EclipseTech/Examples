@@ -31,7 +31,7 @@ if __name__ == '__main__':
     # Just log warning and error levels to a 'warning_and_error.log'
     warn_error_file_handler = logging.FileHandler('warning_and_error.log')
     warn_error_file_handler.setFormatter(file_handler_format)
-    warn_error_file_handler.addFilter(LoggingLevelFilter([logging.WARNING, logging.ERROR]))
+    warn_error_file_handler.addFilter(LoggingLevelFilter([logging.WARNING, logging.ERROR, logging.CRITICAL]))
     log.addHandler(warn_error_file_handler)
 
     # Again with the basic log example
@@ -45,3 +45,4 @@ if __name__ == '__main__':
         raise Exception('This is an Exception!')
     except:
         log.exception('{} Exception is an Error level log with stack trace'.format('Example 5'))
+    log.critical('{} Critical level log'.format('Example 6'))

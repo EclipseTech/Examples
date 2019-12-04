@@ -19,3 +19,5 @@ if __name__ == '__main__':
         raise Exception('This is an Exception!')
     except:
         log.exception('{} Exception is an Error level log with stack trace'.format('Example 5'))
+
+    log.critical('{} Critical level log'.format('Example 6'))
