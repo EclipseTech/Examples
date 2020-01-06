@@ -4,6 +4,10 @@ import re
 
 # Modified from https://relaxdiego.com/2014/07/logging-in-python.html
 class RedactFilter(logging.Filter):
+    '''
+    Redact the first word after a specific regex
+    '''
+    # (Specific words) (followed by any amount of spaces) (including a few delemiter characters)
     default_filter = ['(password|passwd|pass|token)(\s*)?([=|:]*)']
 
     def __init__(self, filter_prefix_regexes=default_filter):

@@ -17,6 +17,7 @@ if __name__ == '__main__':
 
     log.error('Shut up log hog! You should not print anything to my console!')
 
+    # This is just one way to get the logger of another module to disable that logger in the current context
     log_hog_logger = logging.getLogger(log_hog.__name__)
     log_hog_logger.disabled = True
     hog.do_something()

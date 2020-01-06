@@ -18,17 +18,16 @@ if __name__ == '__main__':
     log.addHandler(stream_handler)
     log.setLevel(logging.DEBUG)
 
+    # Setup file logging
     file_format = '%(asctime)-8s %(message)s'
     date_format = '%Y-%m-%d %H:%M:%S %Z'
     file_handler_format = logging.Formatter(fmt=file_format, datefmt=date_format)
-
-    # Just log debug level to a 'debug.log'
+    # Log debug level to a 'debug.log'
     debug_file_handler = logging.FileHandler('debug.log')
     debug_file_handler.setFormatter(file_handler_format)
     debug_file_handler.addFilter(LoggingLevelFilter([logging.DEBUG]))
     log.addHandler(debug_file_handler)
-
-    # Just log warning and error levels to a 'warning_and_error.log'
+    # Log warning and error levels to a 'warning_and_error.log'
     warn_error_file_handler = logging.FileHandler('warning_and_error.log')
     warn_error_file_handler.setFormatter(file_handler_format)
     warn_error_file_handler.addFilter(LoggingLevelFilter([logging.WARNING, logging.ERROR, logging.CRITICAL]))
@@ -36,7 +35,7 @@ if __name__ == '__main__':
 
     # Again with the basic log example
     # However this time it is going to log debug, warnings and errors to their own files
-    # Info and above will be printed to the console
+    # Info and above will be printed to stdout & stderr
     log.debug('{} Debug level log'.format('Example 1'))
     log.info('{} Info level log'.format('Example 2'))
     log.warning('{} Warning level log'.format('Example 3'))
