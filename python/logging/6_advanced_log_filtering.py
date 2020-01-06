@@ -1,5 +1,8 @@
 import logging
 import re
+import sys
+PY2 = sys.version_info[0] == 2
+PY3 = sys.version_info[0] == 3
 
 
 # Modified from https://relaxdiego.com/2014/07/logging-in-python.html
@@ -24,7 +27,10 @@ class RedactFilter(logging.Filter):
         return True
 
     def redact(self, msg):
-        msg = isinstance(msg, basestring) and msg or str(msg)
+        if PY3:
+            msg = isinstance(msg, str) and msg or str(msg)
+        elif PY2:
+            msg = isinstance(msg, basestring) and msg or str(msg)
         for prefix in self.__prefixes:
             if re.match(prefix, msg):
                 # regex replace `regex<any spaces>(first word)` become `regex<any spaces><<REDACTED>>` maintaining spaces
