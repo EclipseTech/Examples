@@ -4,7 +4,7 @@ import logging
 if __name__ == '__main__':
     # Setup logging name
     log = logging.getLogger(__name__)
-    # Setup where logging prints output (using stdout and stderr by default)
+    # Setup where logging prints output (using stderr by default)
     handler = logging.StreamHandler()
     # Setup log formatting
     formatter = logging.Formatter('%(levelname)-8s %(message)s')

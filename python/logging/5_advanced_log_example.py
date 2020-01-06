@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
     # Again with the basic log example
     # However this time it is going to log debug, warnings and errors to their own files
-    # Info and above will be printed to stdout & stderr
+    # Info and above will be printed to stderr
     log.debug('{} Debug level log'.format('Example 1'))
     log.info('{} Info level log'.format('Example 2'))
     log.warning('{} Warning level log'.format('Example 3'))
